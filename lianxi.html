@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简介</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+        
+        #introImage {
+            max-width: 100%;
+            max-height: 100%;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <div id="introContainer">
+        <img src="img/联系.png" alt="简介图片" id="introImage" style="display: none;">
+    </div>
+
+    <script>
+        // 页面加载完毕后执行动画
+        document.addEventListener('DOMContentLoaded', function() {
+            const introImage = document.getElementById('introImage');
+            introImage.style.display = 'block'; // 显示图片
+            setTimeout(function() {
+                introImage.style.opacity = '1'; // 设置透明度为1，触发淡入效果
+            }, 100);
+        });
+    </script>
+</body>
+</html>

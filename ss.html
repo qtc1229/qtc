@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>上海商学院</title>
+    <style>
+        /* Reset CSS */
+        body, h1, h2, h3, p, ul, li {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f0f0f0;
+        }
+        
+        header {
+            background-color: #0072bc;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .logo {
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            width: 50px; /* 调整校徽大小 */
+            height: auto;
+            animation: spin 2s linear infinite; /* 添加旋转动画 */
+        }
+        
+        nav {
+            background-color: #f0f0f0;
+            padding: 10px;
+            text-align: center;
+        }
+        
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #0072bc;
+            font-weight: bold;
+        }
+        
+        section {
+            background-color: white;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        
+        footer {
+            background-color: #0072bc;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            nav a {
+                margin: 5px;
+            }
+            section {
+                margin: 10px 0;
+            }
+        }
+        
+        /* Keyframe Animation */
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+     
+    
+    </style>
+</head>
+<body>
+    <header>
+        <img src="img/校徽.png" alt="上海商学院校徽" class="logo"style="width: 78px;">
+        <h1>欢迎访问上海商学院</h1>
+    </header>
+   
+    <nav>
+        <a href="#about">学院概况</a>
+        <a href="#programs">专业项目</a>
+        <a href="#admissions">招生信息</a>
+        <a href="#events">活动与新闻</a>
+        <a href="#contact">联系我们</a>
+    </nav>
+    <a href="xueyuan.html">
+        <section id="about">
+            <h2>学院概况</h2>
+            <p>上海商学院的简介和主要特点。</p>
+        </section>
+    </a>
+    
+    <a href="zhuanye.html">
+        <section id="programs">
+            <h2>专业项目</h2>
+            <p>上海商学院提供的各种专业项目信息。</p>
+        </section>
+    </a>
+    
+    <a href="zhaoshen.html">
+        <section id="admissions">
+            <h2>招生信息</h2>
+            <p>包括招生政策、入学要求和申请流程。</p>
+        </section>
+    </a>
+    
+    <a href="huodong.html">
+        <section id="events">
+            <h2>活动与新闻</h2>
+            <p>展示最新的学术活动、校园新闻和重要公告。</p>
+        </section>
+    </a>
+    
+    <a href="lianxi.html">
+        <section id="contact">
+            <h2>联系我们</h2>
+            <p>联系信息和地图等联系方式。</p>
+        </section>
+    </a>
+    
+    <section id="carousel">
+        <h2>精彩瞬间</h2>
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="img/轮播1.png" style="width:1600px;height: 700px;">
+            </div>
+    
+            <div class="mySlides fade">
+                <img src="img/轮播2.png" style="width:1600px;height: 700px;">
+            </div>
+    
+            <div class="mySlides fade">
+                <img src="img/轮播3.png" style="width:1600px;height: 700px;">
+            </div>
+        </div>
+        <br>
+    
+        <div style="text-align:center">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    
+        <script>
+            var slideIndex = 0;
+            showSlides();
+    
+            function showSlides() {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) { slideIndex = 1 }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+                setTimeout(showSlides, 2000); // 切换时间间隔（单位：毫秒）
+            }
+        </script>
+    </section>
+    <style>
+        /* 现有样式保持不变 */
+        body, h1, h2, h3, p, ul, li {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f0f0f0;
+            padding-bottom: 60px; /* 为了避免 footer 遮挡内容，增加底部 padding */
+        }
+        
+        header {
+            background-color: #0072bc;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            position: relative;
+            z-index: 1; /* 确保在顶部 */
+        }
+        
+        .logo {
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            width: 50px; /* 调整校徽大小 */
+            height: auto;
+            animation: spin 2s linear infinite; /* 添加旋转动画 */
+            z-index: 1; /* 确保在顶部 */
+        }
+        
+        nav {
+            background-color: #f0f0f0;
+            padding: 10px;
+            text-align: center;
+            z-index: 1; /* 确保在顶部 */
+        }
+        
+        section {
+            background-color: white;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            z-index: 0; /* 确保在底部 */
+        }
+        
+        footer {
+            background-color: #0072bc;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed; /* 固定在视口底部 */
+            bottom: 0;
+            width: 100%;
+            z-index: 9998; /* 设置较高的层级 */
+        }
+        
+        /* 轮播图样式 */
+        #carousel {
+            background-color: #f0f0f0;
+            padding: 20px;
+            margin: 20px auto; /* 居中显示 */
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            z-index: 2; /* 提高层级 */
+            position: relative; /* 确保容器相对定位 */
+            width: 1565px; /* 设置宽度 */
+            height: 700px; /* 设置高度 */
+            overflow: hidden; /* 隐藏超出部分 */
+        }
+        
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            overflow: hidden;
+        }
+        
+        .mySlides {
+            display: none;
+            width: 100%;
+        }
+        
+        .mySlides img {
+            max-width: 100%; /* 图片最大宽度为100% */
+            height: auto;
+        }
+        
+        /* 增加间距或调整大小 */
+        .slideshow-container {
+            margin-top: 20px;
+        }
+
+     
+
+
+    </style>
+    
+    <!-- 现有HTML内容保持不变 -->
+    
+    <!-- 轮播图代码保持不变 -->
+    
+   
+    
+    <footer>
+        <p>&copy; 2024 上海商学院.From qtc All rights reserved.钱天晨制作</p>
+    </footer>
+
+   
+</head>
+<body>
+    
+    
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bouncing Icon</title>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                background-color: #f0f0f0;
+            }
+    
+            #bouncing-icon {
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 100px; /* 图标宽度 */
+                height: auto;
+                cursor: pointer;
+                animation: bounce 5s infinite alternate; /* 弹跳动画 */
+                z-index: 9999; /* 确保置于顶层 */
+            }
+    
+            @keyframes bounce {
+                0%, 100% { transform: translate(-50%, -50%) translateY(0); }
+                50% { transform: translate(-50%, -50%) translateY(-30px); } /* 弹跳高度 */
+            }
+        </style>
+    </head>
+    <body>
+    
+    <!-- 点击图标跳转到新页面 -->
+    <a href="game.html" target="_blank">
+        <div id="bouncing-icon">
+            <!-- 插入图片 -->
+            <img src="img/校徽2.png" alt="校徽">
+        </div>
+    </a>
+    
+    <script>
+        // 获取图标元素
+        var icon = document.getElementById('bouncing-icon');
+    
+        // 页面边缘碰撞检测和反弹效果
+        function animateIcon() {
+            var x = window.innerWidth / 2; // 初始位置为窗口中心
+            var y = window.innerHeight / 2;
+            var vx = 2; // 水平速度
+            var vy = 3; // 垂直速度
+            var iconWidth = icon.offsetWidth; // 图标宽度
+            var iconHeight = icon.offsetHeight; // 图标高度
+    
+            function moveIcon() {
+                x += vx;
+                y += vy;
+    
+                // 检测碰撞
+                if (x + iconWidth >= window.innerWidth || x <= 0) {
+                    vx = -vx; // 水平反弹
+                }
+                if (y + iconHeight >= window.innerHeight || y <= 0) {
+                    vy = -vy; // 垂直反弹
+                }
+    
+                // 更新位置
+                icon.style.left = x + 'px';
+                icon.style.top = y + 'px';
+    
+                // 循环动画
+                requestAnimationFrame(moveIcon);
+            }
+    
+            moveIcon();
+        }
+    
+        animateIcon();
+    </script>
+    
+    <!-- 可以放更多内容，使页面可以滚动 -->
+    <div style="height: 2000px;">
+        <!-- 页面内容 -->
+    </div>
+    
+    </body>
+    </html>
+    <!DOCTYPE html>
+    <html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>播放声音</title>
+        <style>
+            #playSoundButton {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                padding: 10px 20px;
+                background-color: #007bff;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 16px;
+                z-index: 1000;
+            }
+    
+            audio {
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <button id="playSoundButton" onclick="togglePlayPause()">音乐播放 / 暂停</button>
+    
+        <audio id="introAudio">
+            <source src="钱天晨制作的原声3.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    
+        <script>
+            const introAudio = document.getElementById('introAudio');
+    
+            function togglePlayPause() {
+                if (introAudio.paused) {
+                    introAudio.play();
+                } else {
+                    introAudio.pause();
+                }
+            }
+        </script>
+    </body>
+    </html>
+    
+
+</body>
+</html>
+
